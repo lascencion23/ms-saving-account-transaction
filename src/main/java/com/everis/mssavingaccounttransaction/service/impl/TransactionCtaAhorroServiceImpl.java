@@ -20,7 +20,7 @@ public class TransactionCtaAhorroServiceImpl implements SavingAccountTransaction
 	private final WebClient webClient;
 	private final ReactiveCircuitBreaker reactiveCircuitBreaker;
 	
-	String uri = "http://localhost:8090/api/ms-saving-account/savingAccount";
+	String uri = "http://gateway:8090/api/ms-saving-account/savingAccount";
 
 	public TransactionCtaAhorroServiceImpl(ReactiveResilience4JCircuitBreakerFactory circuitBreakerFactory) {
 		this.webClient = WebClient.builder().baseUrl(this.uri).build();
